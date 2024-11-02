@@ -1,15 +1,6 @@
 options {
 	directory "/var/cache/bind";
 
-	logging {
-    	channel queries.log {
-        	file "/var/log/bind/queries.log";
-        	severity dynamic;
-    	};
-    	category queries { queries.log; };
-	};
-
-
 	// If there is a firewall between you and nameservers you want
 	// to talk to, you may need to fix the firewall to allow multiple
 	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
@@ -29,4 +20,19 @@ options {
 	//========================================================================
 	dnssec-validation no;
 	listen-on-v6 { none; };
+};
+
+logging {
+    channel queries.log {
+        file "/var/log/bind/queries.log";
+        severity dynamic;
+    }; 
+
+    channel update.log {
+        file "/var/log/bind/update.log";
+        severity dynamic;
+    };
+
+    category queries { queries.log; };
+    category update { update.log; };
 };

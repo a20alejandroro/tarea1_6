@@ -6,7 +6,6 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-
 key "a20alejandroro" {
 	algorithm hmac-sha256;
 	secret "0yxHEZ26gQ4+pU6PUkUfZnGJQyg6BHImSrUM5mk8ae8=";
@@ -15,11 +14,13 @@ key "a20alejandroro" {
 zone "starwars.lan" {
     type master;
     file "/etc/bind/db.starwars.lan";
-    allow-transfer { key "a20alejandroro"; }; 
+    allow-transfer { key "a20alejandroro"; };
+    allow-update { key "a20alejandroro"; };
 };
 
 zone "20.168.192.in-addr.arpa" {
     type master;
     file "/etc/bind/db.20.168.192";
-    allow-transfer { key "a20alejandroro"; }; 
+    allow-transfer { key "a20alejandroro"; };
+    allow-update { key "a20alejandroro"; };
 };
