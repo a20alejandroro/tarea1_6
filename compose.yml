@@ -38,6 +38,8 @@ services:
     dns:
       - 192.168.20.10
       - 192.168.20.11
+    volumes:
+      - ./debian/conf/eq1/rndc.conf:/etc/bind/rndc.conf
 networks:
   rededns:
     ipam:

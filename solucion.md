@@ -34,6 +34,18 @@
 
 **3**. Permite que o equipo darthvader poida ser controlado coa utilidade rndc desde un cliente ubuntu ou debian. Fai unha captura do servidor reiniciandose.
 
+- Configuración del fichero "named.conf.local" del servidor darthvader:
+
+  ![Imagen Ejer3_1.png](/imagenes/Ejer3_1.png)
+
+- Configuración del fichero "rndc.conf" del cliente:
+
+  ![Imagen Ejer3_2.png](/imagenes/Ejer3_2.png)
+
+- Resultado de reinicio con rndc:
+
+  ![Imagen Ejer3_3.png](/imagenes/Ejer3_3.png)
+
 ---
 
 **4**. Instala unha zona dinámica no servidor darthvader chamada galaxia.lan e introduce os rexistros aaylasecura (192.168.20.239) e yarua (192.168.20.238). Esta zona debe ser cargada mediante rndc, e o servidor reiniciado con rndc. Proba tamén a eliminala con rndc. Inclue capturas do resultado dos comandos, comprobando tamén que se poden facer consultas.

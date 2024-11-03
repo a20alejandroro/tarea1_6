@@ -4,7 +4,7 @@ RUN apt update && apt install -y net-tools procps most iproute2  iputils-ping dn
 
 RUN apt install -y bind9 dnsutils rsyslog
 
-RUN apt install nano
+RUN apt install nano -y
 
 RUN apt clean && rm -rf /var/lib/apt/lists/*
 
